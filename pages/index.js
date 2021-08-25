@@ -12,6 +12,15 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+        <button
+          type="button"
+          onClick={() => {
+            throw new Error("Sentry Frontend Error");
+          }}
+        >
+          Throw error, trigger Sentry
+        </button>
+
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
