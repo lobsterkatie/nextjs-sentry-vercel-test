@@ -19,7 +19,7 @@ Sentry.init({
   // that it will also get attached to your source maps
   beforeSend: (event, hint) => {
     console.log("Sending event:");
-    console.log(event);
+    console.log(event.exception.values[0].value);
     return null;
   },
 });
