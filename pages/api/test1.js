@@ -1,11 +1,20 @@
+console.log("top of handler module");
+
 import { withSentry } from "@sentry/nextjs";
 
-const doAsyncWork = () => Promise.reject(new Error("API Test 1"));
+const doAsyncWork = () => {
+  console.log("I'm in the rejection function");
+  return Promise.reject(new Error("API Test 1"));
+};
+console.log("about to call rejection function");
 doAsyncWork();
+console.log("just called rejection function");
 
 async function handler(req, res) {
-  console.log("I'm in test1!");
+  console.log("I'm in the test1 handler");
   res.status(200).json({ name: "John Doe" });
 }
 
+console.log("about to export the handler");
 export default withSentry(handler);
+console.log("just exported the handler");
