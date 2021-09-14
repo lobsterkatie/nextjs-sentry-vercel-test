@@ -4,7 +4,9 @@ import { withSentry } from "@sentry/nextjs";
 
 const doAsyncWork = () => {
   console.log("I'm in the rejection function");
-  return Promise.reject(new Error("API Test 1"));
+  return Promise.reject(
+    console.log("rejecting as we speak") && new Error("API Test 1")
+  );
 };
 console.log("about to call rejection function");
 doAsyncWork();
