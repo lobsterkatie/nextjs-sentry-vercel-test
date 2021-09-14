@@ -9,7 +9,7 @@ const doAsyncWork = () => {
   );
 };
 console.log("about to call rejection function");
-doAsyncWork();
+doAsyncWork().catch((err) => console.log("just caught the error"));
 console.log("just called rejection function");
 
 async function handler(req, res) {
