@@ -7,6 +7,7 @@ function work() {
 work();
 
 async function handler(req, res) {
+  console.log("I'm in test2!");
   res.status(200).json({ name: "John Doe" });
 }
 

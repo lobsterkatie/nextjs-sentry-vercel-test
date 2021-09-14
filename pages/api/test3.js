@@ -5,6 +5,8 @@ function work() {
 }
 
 async function handler(req, res) {
+  console.log("I'm in test3!");
+
   work();
 
   res.status(200).json({ name: "John Doe" });

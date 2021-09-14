@@ -1,6 +1,8 @@
 import * as Sentry from "@sentry/nextjs";
 
 async function handler(req, res) {
+  console.log("I'm in test4!");
+
   try {
     throw new Error("API Test 4");
   } catch (error) {
