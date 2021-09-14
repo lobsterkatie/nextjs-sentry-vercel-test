@@ -10,7 +10,7 @@ Sentry.init({
   debug: true,
   dsn:
     SENTRY_DSN ||
-    "https://95dba3055c2c4041be47633be7d139c9@o973824.ingest.sentry.io/5925157",
+    "https://c3d3206b71704aebbe717d5d4dbfe0bd@o87286.ingest.sentry.io/5397699",
   // Adjust this value in production, or use tracesSampler for greater control
   tracesSampleRate: 1.0,
   // ...
